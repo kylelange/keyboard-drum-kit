@@ -1,6 +1,6 @@
-# _(Mock) Google Think_
+# _Keyboard Drum Kit_
 
-#### _{A responsive site using a framework}, {Dec 2, 2016}_
+#### _{A site that allows the user to make drum sounds using keyboard strokes}, {Dec 2, 2016}_
 
 #### By _**Kyle Lange**_
 
@@ -8,17 +8,13 @@
 
 
 ## Description
- This week's code review must include:
+ Today's code include new learnings on:
 
- * Relative units used where appropriate.
+* <kbd> = html5 for keyboard input
 
-* Page(s) respond to at least three different screen sizes.
+* data-key="#" used to save data that is bespoke to the app taht can be manipulated with javascript later
 
-* Images are fluid.
-
-* Project is in a polished, portfolio-quality state.
-
-
+* ???
 
 ## Setup/Installation Requirements
 
@@ -39,8 +35,8 @@ For questions or comments, please __email  [Kyle here.](baronsintrees@gmail.com)
 ## Technologies Used
 
 * HTML5
-* CSS3 with Bootstrap 3
-* JavaScript with jQuery 3.1
+* CSS3
+* Vanilla JavaScript (my own)
 
 ### License
 
