@@ -12,13 +12,17 @@
 
 * <kbd> = html5 for keyboard input
 
-* data-key="#" used to save data that is bespoke to the app taht can be manipulated with javascript later
+* data-key="#" used to save data that is bespoke to the app that can be manipulated with javascript later
 
 * const = constant. If you declare a value to this (globally or locally), it will stay the same.  Often, const names are ALL CAPS. Ex: const FAV_NUM = 7;  One way to change a const is to use it in a conditional statement.  [That will change the value.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 * Attribute Selectors: use the [] to hold the attribute you warranty document.querySelector(`audio[data-key="${e.keyCode}"]`)
 
 * Backticks = used to write proper ES6 so that ${e.keyCode} can be used instead of having to write the keyCode each time singularly.
+
+* transition end event(a brother to the click event):  at a clicked event, a css transition of style will happen and toggle.
+
+* => [The Arrow Function, an ES6 trick](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :does not bind its own this, arguments, super, or new.target. Arrow functions are always anonymous. These function expressions are best suited for non-method functions, and they cannot be used as constructors.
 
 ## Setup/Installation Requirements
 

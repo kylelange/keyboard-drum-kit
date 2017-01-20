@@ -58,14 +58,23 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+
+
   window.addEventListener('keydown', function(event) {
     const AUDIO = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const KEY = document.querySelector(`.key[data-key="${event.keyCode}"]`);
     if(!AUDIO) return; //stops the function from running.
-    
+    AUDIO.currentTime = 0; //rewind the sound file to the beginning.
     AUDIO.play();
-
-
+    KEY.classList.add('playing') //jquery= KEY.addClass('playing');
   });
+
+  function remoteTransition(event) {
+    console.log(event);
+  }
+
+  const KEYS = document.querySelectorAll('.key');
+  KEYS.forEach(key => key.addEventListener('transitionend', removeTransition));
 </script>
 
 
