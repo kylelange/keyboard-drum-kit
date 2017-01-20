@@ -59,18 +59,14 @@
 
 <script>
 
-
-  window.addEventListener('keydown', function(event) {
+  function playSound(event) {
     const AUDIO = document.querySelector(`audio[data-key="${event.keyCode}"]`);
     const KEY = document.querySelector(`.key[data-key="${event.keyCode}"]`);
     if(!AUDIO) return; //stops the function from running.
     AUDIO.currentTime = 0; //rewind the sound file to the beginning.
     AUDIO.play();
     KEY.classList.add('playing') //jquery= KEY.addClass('playing');
-  });
-  
-  const KEYS = document.querySelectorAll('.key');
-  KEYS.forEach(key => key.addEventListener('transitionend', removeTransition));
+  }
 
   function removeTransition(event) {
     //pick the longest event and use that as your transition event for the rest of the stylings.//
@@ -78,6 +74,12 @@
     this.classList.remove('playing');//this='.key'
   }
 
+  //event listeners
+  const KEYS = Array.from(document.querySelectorAll('.key'));
+  //Array.from is used b/c the info is comming in as an array from all divs with the .key class, therefore an array of info.
+  KEYS.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+  window.addEventListener('keydown', playSound);
 
 </script>
 
