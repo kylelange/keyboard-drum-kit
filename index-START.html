@@ -68,13 +68,17 @@
     AUDIO.play();
     KEY.classList.add('playing') //jquery= KEY.addClass('playing');
   });
-
-  function remoteTransition(event) {
-    console.log(event);
-  }
-
+  
   const KEYS = document.querySelectorAll('.key');
   KEYS.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+  function removeTransition(event) {
+    //pick the longest event and use that as your transition event for the rest of the stylings.//
+    if(event.propertyName !== 'transform') return;
+    this.classList.remove('playing');//this='.key'
+  }
+
+
 </script>
 
 
