@@ -7,14 +7,18 @@
 ![screenshot](Screen Shot.png)
 
 
-## Description
+## Learnings
  Today's code include new learnings on:
 
 * <kbd> = html5 for keyboard input
 
 * data-key="#" used to save data that is bespoke to the app taht can be manipulated with javascript later
 
-* ???
+* const = constant. If you declare a value to this (globally or locally), it will stay the same.  Often, const names are ALL CAPS. Ex: const FAV_NUM = 7;  One way to change a const is to use it in a conditional statement.  [That will change the value.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
+* Attribute Selectors: use the [] to hold the attribute you warranty document.querySelector(`audio[data-key="${e.keyCode}"]`)
+
+* Backticks = used to write proper ES6 so that ${e.keyCode} can be used instead of having to write the keyCode each time singularly.
 
 ## Setup/Installation Requirements
 
